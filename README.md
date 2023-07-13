@@ -140,24 +140,23 @@ ORDER BY PostCount DESC;
 WITH like_counts AS (
     SELECT created_at,
            user_id,
-           COUNT(photo_id) AS LikeCount
+           COUNT(photo_id) AS count
     FROM instagram.public.likes
     GROUP BY created_at, user_id
 )
-SELECT TO_CHAR(created_at, 'YYYY-MM-DD') AS Date,
-       COUNT(user_id) AS SignInCount
+SELECT COUNT(user_id) AS Sign_in
 FROM like_counts
-GROUP BY Date;
+GROUP BY created_at;
 ```
 
 **Output:**
 
 ```sql
-+----+------------+-------------+
-| id |    date    | SignInCount |
-+----+------------+-------------+
-|  1 | 2023-07-13 |     77      |
-+----+------------+-------------+
++-------------+
+| SignInCount |
++-------------+
+|     77      |
++-------------+
 ```
 
 ---
