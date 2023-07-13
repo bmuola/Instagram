@@ -12,7 +12,7 @@
 
 ## 🛠️ Overview
 With the **Instagram Case Study**, I queried data to bring insights to the following questions:<br>
-1.First 10 users on the platform<br>
+1.Top 10 followed users on the platform<br>
 2.Total number of registrations<br>
 3.Total number of posts per instagram account<br>
 4.Number of Sign-ins per Day<br>
